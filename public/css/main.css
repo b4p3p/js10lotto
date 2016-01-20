@@ -1,0 +1,106 @@
+@font-face {
+    font-family: 'TimerClock';
+    src:    local("Helvetica Neue Bold"),
+    local("HelveticaNeue-Bold"),
+    url(/public/font/alarm_clock.ttf);
+    font-weight: bold;
+}
+
+#stato{
+    display: inline-block;
+    margin-right: 5px;
+    margin-top: 0;
+    /*text-align: center;*/
+    vertical-align: middle;
+    border: solid red 2px;
+    width: 300px;
+    height: 50px;
+    padding: 0 10px;
+    text-align: left;
+}
+
+#txtStato{
+    vertical-align: middle;
+    line-height: 45px;
+    font-family: 'TimerClock', sans-serif;
+    font-size: 45px;
+    text-align: left;
+}
+
+#btnRefresh{
+    padding: 0;
+    margin: 0;
+}
+
+#spin-container{
+    width: 50px;height: 30px;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: right;
+}
+
+.spin{
+    position: relative;
+    top: 50%;
+    left: 50%
+}
+
+.row_numeri{
+    font-size : 20px;
+}
+
+.estrazione_stato{
+    background: cornflowerblue;
+    border: solid 2px;
+    width: 15%;
+    height: 50px;
+    line-height: 45px; /* <-- this is what you must define */
+    vertical-align: middle;
+    text-align: center;
+}
+
+.numero{
+    display: inline-block;
+    font-weight: bold;
+    min-width: 32px;
+    width: 32px;
+    padding: 0 5px;
+    height: 30px;
+    line-height: 25px;
+    text-align: center;
+}
+
+.numero-previsione{
+    min-width: 45px;
+    width: 45px;
+    font-weight: bold;
+}
+
+.previsioneUscita{
+    text-decoration: line-through;
+    font-weight: normal;
+}
+
+.previsioneNonUscita{
+    border: solid red 2px;
+}
+
+.numero-content{
+    text-align: center;
+    min-width: 34px;
+    width: 34px;
+}
+
+.risEquazione{
+    background: rgba(50, 255, 0, 0.32);
+    width: 100%;
+}
+
+.numeroEvidenziato{
+    border: solid 2px red;
+    background: rgba(189, 255, 112, 0.5);
+}
+
+.hidden{
+    display: none;
+}

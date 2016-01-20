@@ -1,0 +1,27 @@
+{
+  "name": "diecielotto",
+  "authors": [
+    "b4p3p <montrone.giuseppe@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "angular": "angularjs#~1.4.8",
+    "bootstrap": "~3.3.6",
+    "angular-ui-router": "~0.2.15",
+    "spin.js": "~2.3.2",
+    "async": "~1.5.2",
+    "underscore": "~1.8.3"
+  }
+}

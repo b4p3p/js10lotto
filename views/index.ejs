@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>10 e lotto</title>
+
+  <!--JQUERY-->
+  <script src="/bower_components/jquery/dist/jquery.js"></script>
+  <!--ANGULAR-->
+  <script src="/bower_components/angular/angular.js"></script>
+  <script src="/bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+  <!--ALTRI-->
+  <script src="/bower_components/spin.js/spin.js"></script>
+  <script src="/bower_components/spin.js/jquery.spin.js"></script>
+  <script src="/bower_components/async/dist/async.js"></script>
+  <script src="/bower_components/underscore/underscore.js"></script>
+  <script src="/public/lib/algebra.js/algebra.js"></script>
+  <!--CONTROLLER ANGULAR-->
+  <script src="/public/js/ngInit.js" type="text/javascript"></script>
+  <script src="/public/js/ngEstrazioni.js" type="text/javascript"></script>
+  <script src="/public/js/ngSistSomma.js" type="text/javascript"></script>
+  <!--MODEL-->
+  <script src="/public/model/numero.js" type="text/javascript"></script>
+  <script src="/public/model/estrazione.js" type="text/javascript"></script>
+  <script src="/public/model/estrazioneGiorno.js" type="text/javascript"></script>
+  <!--SERVICE ANGULAR-->
+  <script src="/public/services/equazioneService.js" type="text/javascript"></script>
+  <script src="/public/services/dataService.js" type="text/javascript"></script>
+  <script src="/public/services/guiService.js" type="text/javascript"></script>
+  <script src="/public/services/threadService.js" type="text/javascript"></script>
+
+  <script src="/public/js/ngMain.js" type="text/javascript"></script>
+  <!--BOOTSTRAP-->
+  <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap-theme.css">
+  <!--APPLICAZIONE-->
+  <link rel="stylesheet" href="/public/css/main.css">
+
+</head>
+<body id="body" ng-app="app" ng-controller="mainCtrl">
+
+<% include partials/header.ejs %>
+
+<div class="container" id="page-container" ui-view></div>
+
+</body>
+
+</html>

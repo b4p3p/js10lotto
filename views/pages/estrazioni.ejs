@@ -1,0 +1,48 @@
+<div class="panel panel-default">
+  <div class="panel-body">
+
+    <div style="display: inline-block; width: 100%">
+
+      <label class="label label-success" for="txtControllaEstrazione">
+        Numeri da controllare (metti la VIRGOLA fra i numeri):</label>
+
+      <input id="txtControllaEstrazione"
+             style="width: 100%"
+             placeholder="10, 20, 30"
+             ng-model="$dataService.numeriDaControllare"
+             ng-list required>
+
+    </div>
+
+  </div>
+</div>
+
+<table class="table table-striped"
+       ng-if="$dataService.estrazioni !== null">
+  <tbody>
+  <tr>
+    <th>Estrazione</th>
+    <th>Numeri</th>
+    <th>Oro</th>
+  </tr>
+  <tr class="row_numeri" ng-repeat="estr in $dataService.estrGiornaliera.estrazioni">
+    <td>{{estr.estr}} - {{toOrario(estr.estr)}}</td>
+
+    <td>
+      <div ng-repeat="num in estr.numeri "
+           class="numero"
+           ng-class="{numeroEvidenziato: controllaNumero(num.num)}">
+        <!--<span class="numero-content">-->
+          {{num.num}}
+        <!--</span>-->
+      </div>
+    </td>
+
+    <td class="col_oro">{{estr.oro}}</td>
+  </tr>
+  </tbody>
+</table>
+
+<div ng-if="$dataService.estrazioni == null">
+  Nessuna estrazione caricata
+</div>

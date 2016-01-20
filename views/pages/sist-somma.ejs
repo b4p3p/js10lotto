@@ -1,0 +1,62 @@
+<div class="panel panel-default" xmlns="http://www.w3.org/1999/html">
+    <div class="panel-body">
+        <div style="display: inline-block; width: 100%">
+            <label class="label label-success" for="txtSistema">Equazione da applicare:</label>
+            <input id="txtSistema"
+                   style="width: 100%"
+                   placeholder="[0] + 1"
+                   ng-model="$dataService.equazione">
+        </div>
+
+        <button class="btn btn-success"
+                style="margin-top: 10px"
+                ng-click="applicaEquazione_click()">Applica equazione</button>
+
+    </div>
+</div>
+
+<table class="table table-striped"
+       ng-if="$dataService.estrazioni !== null">
+    <tbody>
+    <tr>
+        <!--colspan="20"-->
+        <th>Estrazione</th>
+        <th>Numeri</th>
+        <th>Oro</th>
+    </tr>
+    <tr class="row_numeri" ng-repeat="estr in $dataService.estrGiornaliera.estrazioni track by $index">
+        <td>{{estr.estr}} - {{toOrario(estr.estr)}}</td>
+        <td>
+            <div ng-repeat="num in estr.numeri track by $index"
+                 class="numero numero-previsione">
+                <!-- ng-class="{numeroEvidenziato: controllaNumero(num)}" -->
+                <!--<span class="numero-content">-->
+                    {{num.num}}
+                <!--</span>-->
+            </div>
+            <div class="risEquazione">
+                <div ng-repeat="num in estr.numeri track by $index"
+                     class="numero numero-previsione">
+                    <div ng-class="{
+                        previsioneUscita: num.isPrevisioneUscita,
+                        previsioneNonUscita: !num.isPrevisioneUscita && num.previsione != '-'}"
+                        style="height: 100%;">
+                        {{num.previsione}}
+                    </div>
+                    <div>
+                        {{num.distanzaUscita}}
+                    </div>
+                    <!--<span style="width: 100%;height: 100%">-->
+                        <!--{{num.previsione}}-->
+                    <!--</span>-->
+                </div>
+            </div>
+        </td>
+        <td class="col_oro">{{estr.oro}}</td>
+    </tr>
+    </tbody>
+</table>
+
+<div ng-if="$dataService.estrazioni == null">
+    Nessuna estrazione caricata
+</div>
