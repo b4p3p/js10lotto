@@ -1,8 +1,12 @@
 @font-face {
   font-family: 'TimerClock';
-  src: local("Helvetica Neue Bold"), local("HelveticaNeue-Bold"), url(/public/font/alarm_clock.ttf);
-  font-weight: bold; }
-#stato {
+  src:    local("Helvetica Neue Bold"),
+  local("HelveticaNeue-Bold"),
+  url(/public/font/alarm_clock.ttf);
+  font-weight: bold;
+}
+
+#stato{
   display: inline-block;
   margin-right: 5px;
   margin-top: 0;
@@ -12,45 +16,50 @@
   width: 300px;
   height: 50px;
   padding: 0 10px;
-  text-align: left; }
+  text-align: left;
+}
 
-#txtStato {
+#txtStato{
   vertical-align: middle;
   line-height: 45px;
   font-family: 'TimerClock', sans-serif;
   font-size: 45px;
-  text-align: left; }
+  text-align: left;
+}
 
-#btnRefresh {
+#btnRefresh{
   padding: 0;
-  margin: 0; }
+  margin: 0;
+}
 
-#spin-container {
-  width: 50px;
-  height: 30px;
+#spin-container{
+  width: 50px;height: 30px;
   display: inline-block;
   vertical-align: middle;
-  text-align: right; }
+  text-align: right;
+}
 
-.spin {
+.spin{
   position: relative;
   top: 50%;
-  left: 50%; }
+  left: 50%
+}
 
-.row_numeri {
-  font-size: 20px; }
+.row_numeri{
+  font-size : 20px;
+}
 
-.estrazione_stato {
+.estrazione_stato{
   background: cornflowerblue;
   border: solid 2px;
   width: 15%;
   height: 50px;
-  line-height: 45px;
-  /* <-- this is what you must define */
+  line-height: 45px; /* <-- this is what you must define */
   vertical-align: middle;
-  text-align: center; }
+  text-align: center;
+}
 
-.numero {
+.numero{
   display: inline-block;
   font-weight: bold;
   min-width: 32px;
@@ -58,34 +67,40 @@
   padding: 0 5px;
   height: 30px;
   line-height: 25px;
-  text-align: center; }
+  text-align: center;
+}
 
-.numero-previsione {
+.numero-previsione{
   min-width: 45px;
   width: 45px;
-  font-weight: bold; }
+  font-weight: bold;
+}
 
-.previsioneUscita {
+.previsioneUscita{
   text-decoration: line-through;
-  font-weight: normal; }
+  font-weight: normal;
+}
 
-.previsioneNonUscita {
-  border: solid red 2px; }
+.previsioneNonUscita{
+  border: solid red 2px;
+}
 
-.numero-content {
+.numero-content{
   text-align: center;
   min-width: 34px;
-  width: 34px; }
+  width: 34px;
+}
 
-.risEquazione {
+.risEquazione{
   background: rgba(50, 255, 0, 0.32);
-  width: 100%; }
+  width: 100%;
+}
 
-.numeroEvidenziato {
+.numeroEvidenziato{
   border: solid 2px red;
-  background: rgba(189, 255, 112, 0.5); }
+  background: rgba(189, 255, 112, 0.5);
+}
 
-.hidden {
-  display: none; }
-
-/*# sourceMappingURL=main.css.map */
+.hidden{
+  display: none;
+}

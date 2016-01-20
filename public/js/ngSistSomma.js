@@ -21,4 +21,7 @@ app.controller('sistSommaCtrl', function($scope, $dataService) {
 
     $scope.applicaEquazione_click = function() { $scope.onRefresh(); };
 
+    //Aggiorno la pagina
+    $scope.onRefresh();
+
 });

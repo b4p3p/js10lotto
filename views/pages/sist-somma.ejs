@@ -29,18 +29,16 @@
         <td>
             <div ng-repeat="num in estr.numeri track by $index"
                  class="numero numero-previsione">
-                <!-- ng-class="{numeroEvidenziato: controllaNumero(num)}" -->
-                <!--<span class="numero-content">-->
-                    {{num.num}}
-                <!--</span>-->
+                {{num.num}}
             </div>
             <div class="risEquazione">
                 <div ng-repeat="num in estr.numeri track by $index"
-                     class="numero numero-previsione">
+                     class="numero numero-previsione"
+                     ng-if="num.previsione != null">
                     <div ng-class="{
                         previsioneUscita: num.isPrevisioneUscita,
                         previsioneNonUscita: !num.isPrevisioneUscita && num.previsione != '-'}"
-                        style="height: 100%;">
+                        style="height: 100%;" >
                         {{num.previsione}}
                     </div>
                     <div>
