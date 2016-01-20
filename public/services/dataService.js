@@ -5,7 +5,7 @@ app.service('$dataService', function(EstrazioneGiorno){
     this.estrGiornaliera = new EstrazioneGiorno();
     this.equazione = "";
     this.numeriDaControllare = [];
-    this.equazione = "[-2]";
+    this.equazione = "[-2] * 3";
 
     this.getEstrazioneAsync = function(callback){
 

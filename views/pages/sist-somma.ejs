@@ -29,7 +29,8 @@
         <td>{{estr.estr}} - {{toOrario(estr.estr)}}</td>
         <td>
             <div ng-repeat="num in estr.numeri track by $index"
-                 class="numero-previsione">
+                 class="numero-previsione"
+                 ng-class="{usatoPerPrevisione: num.isUsatoXPrevisione}">
                 {{num.num}}
             </div>
             <div class="risEquazione">

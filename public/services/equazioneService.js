@@ -101,19 +101,19 @@ app.service('$equazioneService', function(){
     /**
      * Controlla se il numero passato come parametro è uscito
      * Salva le informazioni all'interno di numero
-     * @param numero
+     * @param prev
      * @param row
      * @param col
      * @returns {boolean}
      */
-    this.controllaEquazione = function(numero, row, col)
+    this.controllaEquazione = function(prev, row, col)
     {
         //if ( row == 0) return false;    //é la prima estrazione
 
-        if ( numero.previsione == '-') return false;
+        if ( prev.previsione == '-') return false;
 
         //prendo la previsione
-        var num = Math.abs(numero.previsione); // i numeri negativi sono da considerarsi positivi
+        var num = Math.abs(prev.previsione); // i numeri negativi sono da considerarsi positivi
 
         if ( num > 90 )  //uso la somma dei numeri
         {
@@ -137,14 +137,14 @@ app.service('$equazioneService', function(){
                 if ( nCtrl.isUsatoXPrevisione ) continue;
 
                 if ( nCtrl.num == num ) {
-                    numero.isPrevisioneUscita = true;
-                    numero.distanzaUscita = distanzaUscita;
+                    prev.isPrevisioneUscita = true;
+                    prev.distanzaUscita = distanzaUscita;
                     nCtrl.isUsatoXPrevisione = true;
                     return true;
                 }
             }
         }
-        numero.isPrevisioneUscita = false;  //superfluo
+        prev.isPrevisioneUscita = false;  //superfluo
         return false;
     }
 

@@ -72,7 +72,7 @@ $heightPrevisione: 30px;
   text-align: center;
 }
 
-.numero-previsione{
+.numero-previsione {
   display: inline-block;
   font-weight: bold;
   min-width: 45px;
@@ -82,13 +82,12 @@ $heightPrevisione: 30px;
   line-height: 25px;
   text-align: center;
 
-  .alzaNumero{
+  .alzaNumero {
     //position: relative;
     //top: -$heightPrevisione;
   }
 
-  .distanza-uscita
-  {
+  .distanza-uscita {
     font-weight: bold;
     color: green;
     font-size: 15px;
@@ -96,7 +95,9 @@ $heightPrevisione: 30px;
 
 }
 
-
+.usatoPerPrevisione{
+  text-decoration: underline;
+}
 
 .previsioneUscita{
   text-decoration: line-through;
