@@ -122,6 +122,7 @@ app.service('$equazioneService', function(){
             _.each(strNum, function(c){
                 num += parseInt(c);
             });
+            prev.numConvertito = num;
         }
 
         var distanzaUscita = 0;

@@ -70,10 +70,12 @@ $heightPrevisione: 30px;
   height: 30px;
   line-height: 25px;
   text-align: center;
+  vertical-align: text-top;
 }
 
 .numero-previsione {
   display: inline-block;
+  margin: auto;
   font-weight: bold;
   min-width: 45px;
   width: 45px;
@@ -81,6 +83,8 @@ $heightPrevisione: 30px;
   height: $heightPrevisione;
   line-height: 25px;
   text-align: center;
+
+  vertical-align: top;
 
   .alzaNumero {
     //position: relative;
@@ -91,6 +95,11 @@ $heightPrevisione: 30px;
     font-weight: bold;
     color: green;
     font-size: 15px;
+  }
+
+  .numConvertito{
+    font-size: 15px;
+    font-style: italic;
   }
 
 }
@@ -118,6 +127,7 @@ $heightPrevisione: 30px;
 .risEquazione{
   background: rgba(50, 255, 0, 0.32);
   width: 100%;
+  height: $heightPrevisione * 2.5;
 }
 
 .numeroEvidenziato{

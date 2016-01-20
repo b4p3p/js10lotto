@@ -38,12 +38,27 @@
                      class="numero-previsione"
                      ng-if="num.previsione != null">
 
-                    <div ng-class="{
+                    <div ng-if="num.numConvertito == null"
+                        ng-class="{
                         previsioneUscita: num.isPrevisioneUscita,
                         previsioneNonUscita: !num.isPrevisioneUscita && num.previsione != '-',
                         alzaNumero: num.distanzaUscita == -1}"
-                        style="height: 100%;" >
+                        style="height: 100%" >
                         {{num.previsione}}
+                    </div>
+
+                    <div ng-if="num.numConvertito != null"
+                         ng-class="{
+                        previsioneUscita: num.isPrevisioneUscita,
+                        previsioneNonUscita: !num.isPrevisioneUscita && num.previsione != '-',
+                        alzaNumero: num.distanzaUscita == -1}"
+                         style="height: 100%;" >
+                        {{num.numConvertito }}
+                    </div>
+
+                    <div ng-if="num.numConvertito != null"
+                         class="numConvertito">
+                        {{'(' + num.previsione + ')'}}
                     </div>
 
                     <div ng-if="num.distanzaUscita > -1"

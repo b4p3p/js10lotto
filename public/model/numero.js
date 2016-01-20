@@ -6,6 +6,7 @@ app.factory('Numero', function(){
         this.isPrevisioneUscita = false;    //usato per lo stile nella pagina
         this.distanzaUscita = -1;           //misura la distanza dalla previsione
         this.isUsatoXPrevisione = false;
+        this.numConvertito = null;
     }
 
 
