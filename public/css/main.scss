@@ -73,17 +73,29 @@ $heightPrevisione: 30px;
   vertical-align: text-top;
 }
 
+//Rettangolo verde contentente i numeri
+.risEquazione{
+  background: rgba(50, 255, 0, 0.32);
+  width: 100%;
+  height: auto;
+
+  display: table;
+}
+
 .numero-previsione {
+
   display: inline-block;
+
+  //display: table-row;
+
   margin: auto;
   font-weight: bold;
   min-width: 45px;
   width: 45px;
   padding: 0 5px;
-  height: $heightPrevisione;
-  line-height: 25px;
+  // height: $heightPrevisione;
+  // line-height: 25px;
   text-align: center;
-
   vertical-align: top;
 
   .alzaNumero {
@@ -123,12 +135,7 @@ $heightPrevisione: 30px;
   width: 34px;
 }
 
-//Rettangolo verde contentente i numeri
-.risEquazione{
-  background: rgba(50, 255, 0, 0.32);
-  width: 100%;
-  height: $heightPrevisione * 2.5;
-}
+
 
 .numeroEvidenziato{
   border: solid 2px red;

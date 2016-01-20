@@ -33,7 +33,7 @@
                  ng-class="{usatoPerPrevisione: num.isUsatoXPrevisione}">
                 {{num.num}}
             </div>
-            <div class="risEquazione">
+            <div class="risEquazione"> <!-- spazio colorato di verde -->
                 <div ng-repeat="num in estr.numeri track by $index"
                      class="numero-previsione"
                      ng-if="num.previsione != null">
@@ -65,9 +65,10 @@
                          class="distanza-uscita">
                         {{'+' + num.distanzaUscita}}
                     </div>
-                    <div ng-if="num.distanzaUscita == -1">
-                        &nbsp;
-                    </div>
+
+                    <!--<div ng-if="num.distanzaUscita == -1">-->
+                        <!--&nbsp;-->
+                    <!--</div>-->
 
                 </div>
             </div>
