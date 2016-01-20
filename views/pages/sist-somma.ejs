@@ -24,29 +24,35 @@
         <th>Numeri</th>
         <th>Oro</th>
     </tr>
-    <tr class="row_numeri" ng-repeat="estr in $dataService.estrGiornaliera.estrazioni track by $index">
+    <tr class="row_numeri"
+        ng-repeat="estr in $dataService.estrGiornaliera.estrazioni track by $index">
         <td>{{estr.estr}} - {{toOrario(estr.estr)}}</td>
         <td>
             <div ng-repeat="num in estr.numeri track by $index"
-                 class="numero numero-previsione">
+                 class="numero-previsione">
                 {{num.num}}
             </div>
             <div class="risEquazione">
                 <div ng-repeat="num in estr.numeri track by $index"
-                     class="numero numero-previsione"
+                     class="numero-previsione"
                      ng-if="num.previsione != null">
+
                     <div ng-class="{
                         previsioneUscita: num.isPrevisioneUscita,
-                        previsioneNonUscita: !num.isPrevisioneUscita && num.previsione != '-'}"
+                        previsioneNonUscita: !num.isPrevisioneUscita && num.previsione != '-',
+                        alzaNumero: num.distanzaUscita == -1}"
                         style="height: 100%;" >
                         {{num.previsione}}
                     </div>
-                    <div>
-                        {{num.distanzaUscita}}
+
+                    <div ng-if="num.distanzaUscita > -1"
+                         class="distanza-uscita">
+                        {{'+' + num.distanzaUscita}}
                     </div>
-                    <!--<span style="width: 100%;height: 100%">-->
-                        <!--{{num.previsione}}-->
-                    <!--</span>-->
+                    <div ng-if="num.distanzaUscita == -1">
+                        &nbsp;
+                    </div>
+
                 </div>
             </div>
         </td>

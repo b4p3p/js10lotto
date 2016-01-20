@@ -43,6 +43,8 @@ app.controller('mainCtrl', function($scope, $dataService, $threadService, $guiSe
                 $("#nav_sist_somma").addClass("active"); break;
             case "estrazioni":
                 $("#nav_estrazioni").addClass("active"); break;
+            default:
+                $("#nav_estrazioni").addClass("active"); break;
         }
     };
 

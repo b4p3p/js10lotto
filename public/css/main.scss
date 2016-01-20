@@ -1,3 +1,5 @@
+$heightPrevisione: 30px;
+
 @font-face {
   font-family: 'TimerClock';
   src:    local("Helvetica Neue Bold"),
@@ -71,10 +73,30 @@
 }
 
 .numero-previsione{
+  display: inline-block;
+  font-weight: bold;
   min-width: 45px;
   width: 45px;
-  font-weight: bold;
+  padding: 0 5px;
+  height: $heightPrevisione;
+  line-height: 25px;
+  text-align: center;
+
+  .alzaNumero{
+    //position: relative;
+    //top: -$heightPrevisione;
+  }
+
+  .distanza-uscita
+  {
+    font-weight: bold;
+    color: green;
+    font-size: 15px;
+  }
+
 }
+
+
 
 .previsioneUscita{
   text-decoration: line-through;
@@ -91,6 +113,7 @@
   width: 34px;
 }
 
+//Rettangolo verde contentente i numeri
 .risEquazione{
   background: rgba(50, 255, 0, 0.32);
   width: 100%;

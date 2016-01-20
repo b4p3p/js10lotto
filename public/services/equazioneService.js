@@ -108,7 +108,7 @@ app.service('$equazioneService', function(){
      */
     this.controllaEquazione = function(numero, row, col)
     {
-        if ( row == 0) return false;    //é la prima estrazione
+        //if ( row == 0) return false;    //é la prima estrazione
 
         if ( numero.previsione == '-') return false;
 
